@@ -11,14 +11,10 @@ import * as assert from 'uvu/assert'
 // Asserts that the generated custom-elements.json is as expected.
 function process(name) {
   const child_cwd = join(cwd(), 'test', name)
-  console.log(`child_cwd=${child_cwd}`)
-  const child =
-      spawn('cem', ['analyze', '--quiet'], {cwd: child_cwd})
+  const child = spawn('cem', ['analyze', '--quiet'], {cwd: child_cwd})
   const stdout = ''
   child.stdout.on('data', data => stdout += data)
   return once(child, 'close').then(async ([exitcode]) => {
-    console.log(`stdout=${stdout}`)
-
     const actual = await readFile(join(child_cwd, 'custom-elements.json'))
     const expected =
         await readFile(join(child_cwd, 'expected-custom-elements.json'))
