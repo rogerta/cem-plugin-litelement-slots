@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "my-element.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MyElement",
+          "members": [
+            {
+              "kind": "method",
+              "name": "renderFooter_",
+              "privacy": "private"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "slots": [
+            {
+              "name": "header",
+              "description": "An optional header."
+            },
+            {
+              "name": "",
+              "description": "The main body of the element. Multiple comments are supported. Multi-line comments also work, with all leading and trailing space trimmed."
+            },
+            {
+              "name": "footer",
+              "description": "An optional footer."
+            }
+          ],
+          "tagName": "my-element",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyElement",
+          "declaration": {
+            "name": "MyElement",
+            "module": "my-element.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-element",
+          "declaration": {
+            "name": "MyElement",
+            "module": "my-element.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

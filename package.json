@@ -1,0 +1,38 @@
+{
+  "name": "@rogerta/cem-plugin-litelement-slots",
+  "version": "1.0.0",
+  "description": "A plugin for @custom-elements-manifest/analyzer that maps `<slot>` elements in web components to the 'slots' property of the Custom Elements Manifests without requiring JSDoc tags.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "uvu test .test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rogerta/cem-plugin-litelement-slots.git"
+  },
+  "keywords": [
+    "custom-elements",
+    "custom-elements-json",
+    "custom-elements-manifest",
+    "customelements",
+    "webcomponents",
+    "customelementsjson",
+    "customelementsmanifest",
+    "litelement",
+    "lit"
+  ],
+  "author": "Roger Tawa <roger@tawacentral.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogerta/cem-plugin-litelement-slots/issues"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.11.0",
+    "typescript": "^6.0.3",
+    "uvu": "^0.5.6"
+  },
+  "dependencies": {
+    "htmlparser2": "^12.0.0"
+  }
+}
